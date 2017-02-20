@@ -3,10 +3,10 @@ from textwrap import dedent
 import argparse
 import subprocess
 
+
 parser = argparse.ArgumentParser(description='This is a script to create 3D model folder structure')
 parser.add_argument('-p', '--project', help='3D project name', required=True)
 parser.add_argument('-wd', '--wd', help='Working directory', required=True)
-parser.add_argument('-l', '--license', help='License file', required=True)
 args = parser.parse_args()
 
 os.chdir(args.wd)
@@ -32,21 +32,21 @@ for item in dirnames:
     os.mkdir(path3D)
 
 
-def write_readme(project, root_dir, license):
+def write_readme(project, root_dir):
     readme_path = os.path.join(root_dir, "README.md")
-    readme_content = get_readme_text(project, license)
+    readme_content = get_readme_text(project)
     with open(readme_path, 'w') as readme_file:
         readme_file.write(readme_content)
 
 
-def get_readme_text(project, license):
+def get_readme_text(project):
     readme_text = """
         # {project}
         3D data for recreation of a British Museum object.
         # LICENSE
-        The contents of this repository are licensed under {license}
+        The contents of this repository are licensed under CC-BY-NC-SA
         # Credits
-        Photographs and models by {author} {author_email}, Digital Humanities Lead, British Museum
+        Photographs and models by {author} <{author_email}>, Digital Humanities Lead, British Museum
     """.format(
         project=project,
         license=license,
@@ -75,4 +75,12 @@ def get_user_email_from_git():
         return None
 
 
-write_readme(args.project, root_dir, args.license)
+def get_license(project, root_dir):
+    license_path = os.path.join(root_dir, "LICENSE.md")
+    with open(license_path, 'w') as license_file:
+        license_file.write(open('scaffold3D/LICENSE.md', 'r').read())
+    return None
+
+
+write_readme(args.project, root_dir)
+get_license(args.project, root_dir)
