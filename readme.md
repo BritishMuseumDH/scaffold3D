@@ -25,7 +25,7 @@ other folders will be populated when you create masks and models within PhotoSca
 
 To run this (tested on OSX only) issue following command in terminal:
 
-<pre>python -p 'projectname' -wd '/Users/Danielpett/githubProjects/' </pre>
+<pre>python make3D.py -p 'projectname' -wd '/Users/Danielpett/githubProjects/' </pre>
 
 # License
 
