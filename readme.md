@@ -17,7 +17,7 @@ Each project you scaffold will create the following directory structure:
 
 To run this (tested on OSX only) issue following command in terminal:
 
-<pre>python -p 'projectname' -wd '/Users/Danielpett/githubProjects/' license 'CC-BY-NC-SA'</pre>
+<pre>python -p 'projectname' -wd '/Users/Danielpett/githubProjects/' </pre>
 
 # License
 
