@@ -2,6 +2,10 @@
 
 A very simple python script to set up the directory format for adding 3D data to Github.
 
+The @britishmuseum license terms are CC-BY-NC-SA.
+
+# Structure created
+
 Each project you scaffold will create the following directory structure:
 
 <pre>
@@ -9,11 +13,15 @@ Each project you scaffold will create the following directory structure:
 /[projectname]/images
 /[projectname]/masks
 /[projectname]/models
+/[projectname]/.gitignore
 /[projectname]/readme.md
+/[projectname]/LICENSE.md
 </pre>
 
+When you come to add data to the project, you will need to put raw images for 3D into the images folder and then the
+other folders will be populated when you create masks and models within PhotoScan.
 
-# Running Scaffold
+# Running Scaffold3D script
 
 To run this (tested on OSX only) issue following command in terminal:
 

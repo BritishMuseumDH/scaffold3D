@@ -3,7 +3,6 @@ from textwrap import dedent
 import argparse
 import subprocess
 
-
 parser = argparse.ArgumentParser(description='This is a script to create 3D model folder structure')
 parser.add_argument('-p', '--project', help='3D project name', required=True)
 parser.add_argument('-wd', '--wd', help='Working directory', required=True)
@@ -75,12 +74,19 @@ def get_user_email_from_git():
         return None
 
 
-def get_license(project, root_dir):
+def write_license(root_dir):
     license_path = os.path.join(root_dir, "LICENSE.md")
     with open(license_path, 'w') as license_file:
         license_file.write(open('scaffold3D/LICENSE.md', 'r').read())
     return None
 
+def write_ignore(root_dir):
+    ignore_path = os.path.join(root_dir, ".gitignore")
+    with open(ignore_path, 'w') as ignore_file:
+        ignore_file.write(open('scaffold3D/.gitignore', 'r').read())
+    return None
+
 
 write_readme(args.project, root_dir)
-get_license(args.project, root_dir)
+write_license(root_dir)
+write_ignore(root_dir)
