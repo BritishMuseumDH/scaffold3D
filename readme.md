@@ -1,3 +1,5 @@
+[![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--0246--2335-green.svg)](http://orcid.org/0000-0002-0246-2335)
+
 # Scaffold a 3D folder directory
 
 A very simple python script to set up the directory format for adding 3D data to Github.
