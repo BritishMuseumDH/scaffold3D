@@ -1,4 +1,1 @@
-*.pyc
-build/*
-dist/*
 .idea/*

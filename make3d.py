@@ -1,4 +1,5 @@
 import os
+import shutil
 from textwrap import dedent
 import argparse
 import subprocess
@@ -76,14 +77,12 @@ def get_user_email_from_git():
 
 def write_license(root_dir):
     license_path = os.path.join(root_dir, "LICENSE.md")
-    with open(license_path, 'w') as license_file:
-        license_file.write(open('scaffold3D/LICENSE.md', 'r').read())
+    shutil.copy(os.path.join(os.path.dirname(os.path.realpath(__file__)),'scaffold3D/templates/LICENSE.md'), license_path)
     return None
 
 def write_ignore(root_dir):
     ignore_path = os.path.join(root_dir, ".gitignore")
-    with open(ignore_path, 'w') as ignore_file:
-        ignore_file.write(open('scaffold3D/.gitignore', 'r').read())
+    shutil.copy(os.path.join(os.path.dirname(os.path.realpath(__file__)),'scaffold3D/templates/.gitignore'), ignore_path)
     return None
 
 
