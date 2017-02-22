@@ -1,4 +1,5 @@
-[![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--0246--2335-green.svg)](http://orcid.org/0000-0002-0246-2335)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.321570.svg)](https://doi.org/10.5281/zenodo.321570)
+ [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--0246--2335-green.svg)](http://orcid.org/0000-0002-0246-2335)
 
 # Scaffold a 3D folder directory
 
