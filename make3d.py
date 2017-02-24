@@ -41,6 +41,7 @@ def write_readme(project, root_dir):
 
 def get_readme_text(project):
     readme_text = """
+        [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/) 
         # {project}
         3D data for recreation of a British Museum object.
         # LICENSE
